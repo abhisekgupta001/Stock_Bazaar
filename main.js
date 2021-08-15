@@ -35,10 +35,6 @@ function calculateProfitAndLoss(initial, quantity, current){
         var lossPercentage = (loss/initial) * 100;
         showOutput(`Loss is ${loss.toFixed(2)} and loss percentage is ${lossPercentage.toFixed(2)} %`) ;
         showOutputGraphics(`loss.webp`);
-        if(lossPercentage > 50)
-        {
-            document.body.style.background = "red";
-        }
 
     }
     else if(current > initial)
@@ -61,6 +57,7 @@ function calculateProfitAndLoss(initial, quantity, current){
 
 function showOutput(message)
 {
+    outputBox.style.display = "inline-block";
     outputBox.innerText = message;
 }
 
