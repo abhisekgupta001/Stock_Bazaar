@@ -6,6 +6,10 @@ var outputBox = document.querySelector("#output-box");
 var outputGraphic = document.querySelector("#output-graphic");
 
 
+window.addEventListener("load",()=>{
+    showOutput(`Welcome Aboard`);
+    showOutputGraphics(`welcome.webp`);
+});
 
 submitBtn.addEventListener("click",submitHandler);
 
@@ -65,3 +69,4 @@ function showOutputGraphics(gifPath)
 {
     outputGraphic.innerHTML = `<img src="/images/${gifPath}" />`;
 }
+
